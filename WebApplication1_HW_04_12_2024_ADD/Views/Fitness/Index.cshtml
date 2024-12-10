@@ -1,0 +1,14 @@
+﻿@model List<Category>
+
+<div class="container">
+    <h1>Фитнес Программы</h1>
+    <ul class="list-group">
+        @foreach (var category in Model)
+        {
+            <li class="list-group-item">
+                <a href="@Url.Action("Category", "Fitness", new { id = category.Id })">@category.Name</a>
+                <p>@category.Description</p>
+            </li>
+        }
+    </ul>
+</div>

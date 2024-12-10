@@ -1,0 +1,21 @@
+﻿@model Category
+
+<div class="container">
+    <h1>@Model.Name</h1>
+    <p>@Model.Description</p>
+
+    <h3>Статьи</h3>
+    <ul class="list-group">
+        @foreach (var article in Model.Articles)
+        {
+            <li class="list-group-item">
+                <a href="@Url.Action("Article", "Fitness", new { id = article.Id })">
+                    @article.Title
+                </a>
+                <p>@article.Description</p>
+            </li>
+        }
+    </ul>
+
+    <a href="@Url.Action("Index", "Fitness")" class="btn btn-secondary mt-3">Назад</a>
+</div>

@@ -1,0 +1,8 @@
+﻿@model Article
+
+<div class="container">
+    <h1>@Model.Title</h1>
+    <p>@Model.Content</p>
+
+    <a href="@Url.Action("Category", "Fitness", new { id = ViewBag.CategoryId })" class="btn btn-secondary mt-3">Назад</a>
+</div>
